@@ -33,13 +33,14 @@
       flex-shrink: 0;
     }
 
-    /* Card hover glow */
+    /* Card hover glow + lift */
     .service-card {
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
     }
     .service-card:hover {
       border-color: #e63939;
-      box-shadow: 0 0 24px rgba(230, 57, 57, 0.12);
+      box-shadow: 0 0 32px rgba(230, 57, 57, 0.15), 0 16px 40px rgba(0, 0, 0, 0.4);
+      transform: translateY(-6px);
     }
 
     /* Button hover */
