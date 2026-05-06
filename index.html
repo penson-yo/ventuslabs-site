@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ventus Labs — AI Agents as a Service. Autonomous trading bots, intelligent portfolio managers, custom AI teammates, and production-ready software." />
+  <title>Ventus Labs — AI Agents That Actually Work</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            red: {
+              600: '#e63939',
+              500: '#ff2d2d',
+            }
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #0a0a0a; }
+
+    /* Dot logo */
+    .dot-logo {
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* Card hover glow */
+    .service-card {
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .service-card:hover {
+      border-color: #e63939;
+      box-shadow: 0 0 24px rgba(230, 57, 57, 0.12);
+    }
+
+    /* Button hover */
+    .btn-primary {
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+    .btn-primary:hover {
+      background-color: #ff2d2d;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    }
+    .btn-secondary:hover {
+      border-color: #e63939;
+      color: #e63939;
+      transform: translateY(-1px);
+    }
+
+    /* Stat card */
+    .stat-card {
+      transition: background-color 0.2s ease;
+    }
+    .stat-card:hover {
+      background-color: #1a1a1a;
+    }
+
+    /* Gradient fade at bottom of hero */
+    .hero-fade {
+      background: linear-gradient(to bottom, transparent 80%, #0a0a0a 100%);
+    }
+  </style>
+</head>
+<body class="text-white font-sans antialiased">
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <!-- SVG dot-circle -->
+        <svg class="dot-logo" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="circle-clip">
+              <circle cx="18" cy="18" r="16"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#circle-clip)">
+            <!-- Grid of dots: x from 3 to 33, step 3.75 | y from 3 to 33, step 3.75 -->
+            <!-- Row 1 -->
+            <circle cx="3" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="3" r="1.1" fill="#e63939"/>
+            <!-- Row 2 -->
+            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
+            <!-- Row 3 -->
+            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
+            <!-- Row 4 -->
+            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
+            <!-- Row 5 -->
+            <circle cx="3" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="18" r="1.1" fill="#e63939"/>
+            <!-- Row 6 -->
+            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
+            <!-- Row 7 -->
+            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
+            <!-- Row 8 -->
+            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
+            <!-- Row 9 -->
+            <circle cx="3" cy="33" r="1.1" fill="#e63939"/>
+            <circle cx="6.75" cy="33" r="1.1" fill="#e63939"/>
+            <circle cx="10.5" cy="33" r="1.1" fill="#e63939"/>
+            <circle cx="14.25" cy="33" r="1.1" fill="#e63939"/>
+            <circle cx="18" cy="33" r="1.1" fill="#e63939"/>
+            <circle cx="21.75" cy="33" r="1.1" fill="#e63939"/>
+            <circle cx="25.5" cy="33" r="1.1" fill="#e63939"/>
+            <circle cx="29.25" cy="33" r="1.1" fill="#e63939"/>
+            <circle cx="33" cy="33" r="1.1" fill="#e63939"/>
+          </g>
+        </svg>
+        <span class="text-white font-bold text-lg tracking-tight">Ventus Labs</span>
+      </a>
+
+      <!-- CTA -->
+      <a href="mailto:contact@ventuslabs.co"
+         class="btn-primary bg-[#e63939] text-white text-sm font-semibold px-5 py-2.5 rounded-lg">
+        Get In Touch
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────────── -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16">
+    <!-- Subtle red glow behind headline -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#e63939]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-6">AI Agents as a Service</p>
+
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight leading-none mb-6">
+        AI Agents That<br/>
+        <span class="text-[#e63939]">Actually Work.</span>
+      </h1>
+
+      <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Autonomous trading bots, intelligent portfolio managers, custom AI teammates,
+        and production-ready software — built to run 24/7 and create real value.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:contact@ventuslabs.co"
+           class="btn-primary bg-[#e63939] text-white font-bold text-base px-8 py-4 rounded-xl">
+          Start a Project
+        </a>
+        <a href="#services"
+           class="btn-secondary border border-white/20 text-white font-semibold text-base px-8 py-4 rounded-xl">
+          See What We Build
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+      <div class="w-px h-10 bg-white"></div>
+    </div>
+
+    <div class="hero-fade absolute inset-0 pointer-events-none"></div>
+  </section>
+
+  <!-- ─── WHAT WE BUILD ─────────────────────────────────────── -->
+  <section id="services" class="py-28 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">Services</p>
+        <h2 class="text-4xl sm:text-5xl font-black tracking-tight">What We Build</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Card 1 -->
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Autonomous Trading Bots</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Algorithmic agents that monitor markets, execute trades, and manage risk — around the clock, without emotion.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Intelligent Portfolio Managers</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Agents designed to track, rebalance, and optimise portfolios based on rules you define — no manual intervention needed.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 8v4l3 3"/><circle cx="19" cy="5" r="3"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Custom AI Teammates & Agents</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Purpose-built AI agents that handle research, reporting, execution, or communication — tailored to your workflow.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Bespoke Software & Apps</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Full-stack web and mobile applications built to your exact requirements — fast, clean, and production-ready.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M2 20h20M6 20V10M12 20V4M18 20v-8"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">AI Strategy Consulting</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Practical roadmaps for integrating AI into your business — agent architecture, workflow design, and implementation guidance.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Practical AI Education & Training</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Hands-on workshops, guides, and upskilling programs that help founders and teams actually build and deploy AI agents.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROOF / STATS ─────────────────────────────────────── -->
+  <section class="py-28 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">Why It Matters</p>
+        <h2 class="text-4xl sm:text-5xl font-black tracking-tight">Built for Real Results</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <div class="stat-card bg-[#111111] border border-white/8 rounded-2xl p-8 text-center">
+          <p class="text-[#e63939] text-4xl font-black mb-3">24/7</p>
+          <p class="text-gray-400 text-sm leading-relaxed">Autonomous execution — agents that work while you sleep, with no manual intervention required.</p>
+        </div>
+
+        <div class="stat-card bg-[#111111] border border-white/8 rounded-2xl p-8 text-center">
+          <p class="text-[#e63939] text-4xl font-black mb-3">0</p>
+          <p class="text-gray-400 text-sm leading-relaxed">Emotional decisions. Rules-based agents remove bias from trading and portfolio management.</p>
+        </div>
+
+        <div class="stat-card bg-[#111111] border border-white/8 rounded-2xl p-8 text-center">
+          <p class="text-[#e63939] text-4xl font-black mb-3">Fast</p>
+          <p class="text-gray-400 text-sm leading-relaxed">From brief to deployed. We move quickly and ship production-ready systems, not prototypes.</p>
+        </div>
+
+        <div class="stat-card bg-[#111111] border border-white/8 rounded-2xl p-8 text-center">
+          <p class="text-[#e63939] text-4xl font-black mb-3">Custom</p>
+          <p class="text-gray-400 text-sm leading-relaxed">No off-the-shelf templates. Every agent and application is built specifically for your use case.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ───────────────────────────────────────────────── -->
+  <section id="contact" class="py-36 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <!-- Glow -->
+      <div class="absolute left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#e63939]/6 rounded-full blur-3xl pointer-events-none"></div>
+
+      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-6">Ready to build?</p>
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+        Let's deploy powerful<br/>AI agents for you.
+      </h2>
+      <p class="text-gray-400 text-lg mb-12">
+        Tell us what you're working on and we'll take it from there.
+      </p>
+
+      <a href="mailto:contact@ventuslabs.co"
+         class="btn-primary inline-block bg-[#e63939] text-white font-bold text-lg px-10 py-5 rounded-xl mb-6">
+        Get In Touch
+      </a>
+
+      <p class="text-gray-600 text-sm">
+        Or email us directly at
+        <a href="mailto:contact@ventuslabs.co" class="text-gray-400 hover:text-[#e63939] transition-colors duration-200">
+          contact@ventuslabs.co
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="border-t border-white/5 py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <svg width="22" height="22" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="circle-clip-footer">
+              <circle cx="18" cy="18" r="16"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#circle-clip-footer)">
+            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
+          </g>
+        </svg>
+        <span class="text-gray-500 text-sm font-semibold">Ventus Labs</span>
+      </div>
+      <p class="text-gray-600 text-sm">&copy; 2026 Ventus Labs. All rights reserved.</p>
+      <a href="mailto:contact@ventuslabs.co" class="text-gray-600 text-sm hover:text-[#e63939] transition-colors duration-200">
+        contact@ventuslabs.co
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
