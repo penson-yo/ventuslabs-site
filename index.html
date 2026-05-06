@@ -62,9 +62,12 @@
 
     /* Stat card */
     .stat-card {
-      transition: background-color 0.2s ease;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
     }
     .stat-card:hover {
+      border-color: #e63939;
+      box-shadow: 0 0 32px rgba(230, 57, 57, 0.15), 0 16px 40px rgba(0, 0, 0, 0.4);
+      transform: translateY(-6px);
       background-color: #1a1a1a;
     }
 
