@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Custom OpenClaw agent setups and integrations by Ventus Labs. Persistent, self-hosted AI agents for health, fitness, finance, and more." />
+  <title>OpenClaw Agents: Ventus Labs</title>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            red: { 600: '#e63939', 500: '#ff2d2d' }
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #0a0a0a; }
+
+    .service-card {
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .service-card:hover {
+      border-color: #e63939;
+      box-shadow: 0 0 32px rgba(230, 57, 57, 0.15), 0 16px 40px rgba(0,0,0,0.4);
+      transform: translateY(-6px);
+    }
+
+    .btn-primary {
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+    .btn-primary:hover {
+      background-color: #ff2d2d;
+      transform: translateY(-1px);
+    }
+
+    .hero-fade {
+      background: linear-gradient(to bottom, transparent 80%, #0a0a0a 100%);
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(230, 57, 57, 0.1);
+      border: 1px solid rgba(230, 57, 57, 0.2);
+      color: #e63939;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body class="text-white font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="../../index.html" class="flex items-center gap-3 group">
+        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs><clipPath id="cc"><circle cx="18" cy="18" r="16"/></clipPath></defs>
+          <g clip-path="url(#cc)">
+            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
+          </g>
+        </svg>
+        <span class="text-white font-bold text-lg tracking-tight">Ventus Labs</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="/portfolio" class="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200">Portfolio</a>
+        <a href="mailto:contact@ventuslabs.co"
+           class="btn-primary bg-[#e63939] text-white text-sm font-semibold px-5 py-2.5 rounded-lg">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#e63939]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <a href="/portfolio" class="inline-flex items-center gap-2 text-gray-500 text-sm hover:text-white transition-colors duration-200 mb-10 group">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        All Projects
+      </a>
+
+      <div class="flex justify-center gap-2 mb-6 flex-wrap">
+        <span class="tag">OpenClaw</span>
+        <span class="tag">Persistent Agents</span>
+        <span class="tag">Self-Hosted</span>
+        <span class="tag">Voice First</span>
+      </div>
+
+      <h1 class="text-6xl sm:text-7xl md:text-8xl font-black tracking-tight leading-none mb-6">
+        Personal AI<br/>Agents
+      </h1>
+      <p class="text-2xl sm:text-3xl font-bold text-gray-300 mb-6 tracking-tight">
+        Your agent. Your platform.<br/>
+        <span class="text-[#e63939]">Your rules.</span>
+      </p>
+
+      <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Custom OpenClaw setups and integrations built around your life. Persistent, self-hosted AI agents that know you, remember everything, and work through any platform you already use.
+      </p>
+
+      <a href="mailto:contact@ventuslabs.co"
+         class="btn-primary inline-flex items-center gap-2 bg-[#e63939] text-white font-bold text-base px-8 py-4 rounded-xl justify-center">
+        Get Your Agent Built
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M7 17L17 7M17 7H7M17 7v10"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+      <div class="w-px h-10 bg-white"></div>
+    </div>
+    <div class="hero-fade absolute inset-0 pointer-events-none"></div>
+  </section>
+
+  <!-- WHAT IS OPENCLAW -->
+  <section class="py-28 px-6 border-t border-white/5">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">The Foundation</p>
+      <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-8">
+        Built on the world's most<br/>popular AI agent framework.
+      </h2>
+      <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
+        OpenClaw is the most-starred project in GitHub history, with over 347,000 stars. It's a self-hosted, open-source agentic framework that connects to any LLM and runs on your own infrastructure. Your data stays yours. Your agent runs 24/7. No subscriptions, no lock-in.
+      </p>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="py-28 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">Use Cases</p>
+        <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-4">An agent for every area of your life.</h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">One persistent agent, configured for the workflows that matter to you.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Health</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Track symptoms, medications, sleep, and habits. Ask questions in plain language and get answers based on your own history, not generic advice.</p>
+        </div>
+
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Fitness</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Log workouts, track progress, and get programming advice tailored to your goals and training history. Your agent knows your PBs and your weak spots.</p>
+        </div>
+
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Finance</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Monitor spending, set budgets, log transactions, and ask questions about your financial picture. Private by design, running on your own infrastructure.</p>
+        </div>
+
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Organisation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Manage tasks, reminders, and to-do lists through natural conversation. Capture ideas on the go and your agent handles the filing.</p>
+        </div>
+
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Administration</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Draft emails, summarise documents, manage calendars, and handle the low-value admin that eats your day. Automate once, never think about it again.</p>
+        </div>
+
+        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
+          <div class="text-[#e63939] mb-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Voice First</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Speak to your agent hands-free. Voice input pipelines built on top of OpenClaw so you can capture, query, and act without ever touching your phone.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section class="py-28 px-6 border-t border-white/5">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">Platform Integrations</p>
+      <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-8">
+        Works wherever you already are.
+      </h2>
+      <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-16">
+        No new app to learn. Your OpenClaw agent plugs directly into the messaging platforms you use every day. Same agent, any interface.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-5">
+        <div class="bg-[#111111] border border-white/8 rounded-2xl p-6 text-center">
+          <p class="text-white font-bold text-base mb-1">Telegram</p>
+          <p class="text-gray-600 text-xs">Most popular for agents</p>
+        </div>
+        <div class="bg-[#111111] border border-white/8 rounded-2xl p-6 text-center">
+          <p class="text-white font-bold text-base mb-1">Signal</p>
+          <p class="text-gray-600 text-xs">Maximum privacy</p>
+        </div>
+        <div class="bg-[#111111] border border-white/8 rounded-2xl p-6 text-center">
+          <p class="text-white font-bold text-base mb-1">WhatsApp</p>
+          <p class="text-gray-600 text-xs">Familiar and frictionless</p>
+        </div>
+        <div class="bg-[#111111] border border-white/8 rounded-2xl p-6 text-center">
+          <p class="text-white font-bold text-base mb-1">Discord</p>
+          <p class="text-gray-600 text-xs">Great for team agents</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-28 px-6 border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">How It Works</p>
+        <h2 class="text-4xl sm:text-5xl font-black tracking-tight">We build it. You own it.</h2>
+      </div>
+
+      <div class="space-y-6 max-w-2xl mx-auto">
+        <div class="relative flex gap-6 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#e63939] flex items-center justify-center font-black text-sm">1</div>
+          <div class="pt-1.5">
+            <h3 class="font-bold text-lg mb-1">We scope your agent</h3>
+            <p class="text-gray-500 text-base leading-relaxed">We work out which use cases matter most to you, which platforms you want to use, and what your agent needs to know about your life to be genuinely useful.</p>
+          </div>
+        </div>
+
+        <div class="relative flex gap-6 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#111111] border border-white/10 flex items-center justify-center font-black text-sm">2</div>
+          <div class="pt-1.5">
+            <h3 class="font-bold text-lg mb-1">We configure and deploy</h3>
+            <p class="text-gray-500 text-base leading-relaxed">We set up the OpenClaw instance, connect your chosen LLM backend (Claude, GPT, DeepSeek), wire up your messaging platforms, and configure the memory and tools your agent needs.</p>
+          </div>
+        </div>
+
+        <div class="relative flex gap-6 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#111111] border border-white/10 flex items-center justify-center font-black text-sm">3</div>
+          <div class="pt-1.5">
+            <h3 class="font-bold text-lg mb-1">Your agent runs on your infrastructure</h3>
+            <p class="text-gray-500 text-base leading-relaxed">Everything lives on your own server. Your data never touches a third-party platform. The agent is always on, always learning, and entirely yours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-36 px-6 border-t border-white/5">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="absolute left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#e63939]/6 rounded-full blur-3xl pointer-events-none"></div>
+
+      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-6">Get started</p>
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
+        Ready for an agent<br/>built around you?
+      </h2>
+      <p class="text-gray-400 text-lg mb-12">
+        Tell us what you want your agent to do. We'll scope, build, and deploy it for you.
+      </p>
+
+      <a href="mailto:contact@ventuslabs.co"
+         class="btn-primary inline-flex items-center gap-2 bg-[#e63939] text-white font-bold text-lg px-10 py-5 rounded-xl mb-8">
+        Get In Touch
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M7 17L17 7M17 7H7M17 7v10"/>
+        </svg>
+      </a>
+
+      <div class="border-t border-white/5 pt-8 mt-4">
+        <p class="text-gray-600 text-sm mb-1">Built by Ventus Labs</p>
+        <a href="mailto:contact@ventuslabs.co" class="text-gray-400 hover:text-[#e63939] transition-colors duration-200 text-sm">
+          contact@ventuslabs.co
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <svg width="22" height="22" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs><clipPath id="ccf"><circle cx="18" cy="18" r="16"/></clipPath></defs>
+          <g clip-path="url(#ccf)">
+            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
+            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
+          </g>
+        </svg>
+        <span class="text-gray-500 text-sm font-semibold">Ventus Labs</span>
+      </div>
+      <p class="text-gray-600 text-sm">&copy; 2026 Ventus Labs. All rights reserved.</p>
+      <a href="mailto:contact@ventuslabs.co" class="text-gray-600 text-sm hover:text-[#e63939] transition-colors duration-200">
+        contact@ventuslabs.co
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
