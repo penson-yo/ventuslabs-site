@@ -4,7 +4,7 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ## Company Context
 
-Ventus Labs is an **AI Agents as a Service** company — building autonomous AI agents, full-stack apps, and custom software for traders, investors, and founders. Projects span trading bots, portfolio managers, web/mobile apps, and automation tools.
+Ventus Labs is a **Custom Software Development Agency** — building premium web applications, iOS/Android apps, workflow automations, and custom software systems (including trading bots, portfolio integrations, and FinTech tools) for traders, investors, and founders.
 
 **Brand:** Dark backgrounds (#0a0a0a–#111111), bold red accents (#e63939–#ff2d2d), white/gray text. Premium, confident, high-energy tech-finance aesthetic. No generic startup minimalism.
 

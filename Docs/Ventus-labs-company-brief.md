@@ -4,34 +4,34 @@
 **For:** Coding agents, designers, developers, and collaborators
 
 ## Overview
-Ventus Labs is an **AI Agents as a Service** company. We design, build, and deploy fully autonomous AI agents and custom software that deliver real-world results for traders, investors, founders, and teams.
+Ventus Labs is a **Custom Software Development Agency**. We design, build, and deploy high-performance web & mobile applications, internal dashboards, and custom integrations that drive real business results.
 
-We turn AI hype into practical, production-ready solutions — especially in trading, portfolio management, automation, and custom applications.
+We turn complex business challenges into production-ready software solutions — specializing in full-stack applications, robust automations, and practical AI integrations.
 
 ## Core Mission
-Build AI agents and software that **actually work** — reliable, autonomous, and profitable. No fluff. No over-promising. Just systems that run 24/7 and create value.
+Build custom software and systems that **actually work** — reliable, secure, and production-ready. No fluff. No over-promising. Just code that solves problems and creates value.
 
 ## What We Build
 
-### 1. Autonomous AI Agents
-- Trading bots (crypto, stocks, DeFi)
-- Intelligent portfolio managers
-- Custom AI teammates (research, execution, risk management, reporting)
+### 1. Custom Web & Mobile Apps
+- Full-stack premium web applications
+- iOS and Android mobile applications
+- Client portals, analytics dashboards, and admin panels
 
-### 2. Custom Software & Apps
-- Full-stack web and mobile applications
-- Specialized tools (e.g. training + cycle tracking apps, automation dashboards, etc.)
-- Bespoke solutions tailored to client needs
+### 2. Workflow Automation & Systems
+- Custom API integrations and data synchronization middleware
+- Background tasks, automated reporting pipelines, and alerting systems
+- Workflow automation connecting databases, CRMs, and APIs
 
-### 3. AI Strategy Consulting
-- AI integration roadmaps
-- Agent architecture and workflow design
-- Technical audits and implementation guidance
+### 3. AI-Powered Software & Integrations
+- Large Language Model (LLM) integrations and agentic workflows
+- RAG (Retrieval-Augmented Generation) and vector database implementations
+- Custom AI tooling for internal operations and customer-facing apps
 
-### 4. Practical AI Education
-- Hands-on workshops and training
-- Guides, templates, and best practices for building and deploying agents
-- Founder/team upskilling programs
+### 4. Tech Strategy & Consulting
+- Technical audits and codebase restructuring roadmaps
+- System architecture design and consulting for scale
+- Developer/team technical workshops and code reviews
 
 ## Brand Style & Visual Identity
 - **Name:** Ventus Labs (Ventus = Latin for “wind” → speed, flow, power)
@@ -43,11 +43,10 @@ Build AI agents and software that **actually work** — reliable, autonomous, an
 - **Tone of Voice:** Direct, professional, results-focused, slightly bold/edgy.
 
 ## Target Audience
-- Traders & crypto investors
-- DeFi teams and protocols
-- Startup founders who want AI teammates
-- Companies looking to integrate autonomous AI agents
-- Teams wanting practical AI education and custom tools
+- Traders, investors, and FinTech projects
+- Startup founders who want high-performance custom applications
+- Companies looking to automate backend operations and integrate AI
+- Teams wanting custom database tools, dashboard systems, and tech consulting
 
 ## Current Focus (May 2026)
 - Rapid delivery of high-quality AI agents and custom apps
