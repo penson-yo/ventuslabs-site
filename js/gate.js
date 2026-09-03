@@ -133,7 +133,11 @@ async function boot() {
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    uniforms.uSize.value = Math.max(2.6, Math.min(w, h) * 0.004);
+    const halfH = Math.tan((camera.fov * Math.PI) / 360);
+    const fit = Math.min(halfH * camera.aspect, halfH);
+    const margin = w / h < 0.85 ? 1.55 : 1.42;
+    camera.position.z = (radius * margin) / fit;
+    uniforms.uSize.value = Math.max(2.4, Math.min(w, h) * 0.004);
   }
 
   function onPointer(e) {
