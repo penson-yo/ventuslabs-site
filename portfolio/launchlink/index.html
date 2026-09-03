@@ -6,300 +6,130 @@
   <meta name="description" content="LaunchLink: Website design and build by Ventus Labs. A specialist PR agency for the world's fastest-moving tech brands." />
   <title>LaunchLink: Ventus Labs</title>
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            red: { 600: '#e63939', 500: '#ff2d2d' }
-          },
-          fontFamily: {
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { background-color: #0a0a0a; }
-
-    .service-card {
-      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-    }
-    .service-card:hover {
-      border-color: #e63939;
-      box-shadow: 0 0 32px rgba(230, 57, 57, 0.15), 0 16px 40px rgba(0,0,0,0.4);
-      transform: translateY(-6px);
-    }
-
-    .btn-primary {
-      transition: background-color 0.2s ease, transform 0.15s ease;
-    }
-    .btn-primary:hover {
-      background-color: #ff2d2d;
-      transform: translateY(-1px);
-    }
-    .btn-secondary {
-      transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
-    }
-    .btn-secondary:hover {
-      border-color: #e63939;
-      color: #e63939;
-      transform: translateY(-1px);
-    }
-
-    .hero-fade {
-      background: linear-gradient(to bottom, transparent 80%, #0a0a0a 100%);
-    }
-
-    .tag {
-      display: inline-block;
-      background: rgba(230, 57, 57, 0.1);
-      border: 1px solid rgba(230, 57, 57, 0.2);
-      color: #e63939;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 999px;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/site.css" />
 </head>
-<body class="text-white font-sans antialiased">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-white/5">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="../../index.html" class="flex items-center gap-3 group">
-        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-          <defs><clipPath id="cc"><circle cx="18" cy="18" r="16"/></clipPath></defs>
-          <g clip-path="url(#cc)">
-            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
-          </g>
-        </svg>
-        <span class="text-white font-bold text-lg tracking-tight">Ventus Labs</span>
-      </a>
-      <div class="flex items-center gap-6">
-        <a href="/portfolio" class="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200">Portfolio</a>
-        <a href="mailto:contact@ventuslabs.co"
-           class="btn-primary bg-[#e63939] text-white text-sm font-semibold px-5 py-2.5 rounded-lg">
-          Get In Touch
-        </a>
-      </div>
+  <div class="tape" aria-hidden="true">
+    <div class="tape-track">
+      <span>Web Design</span>
+      <span class="dot">/</span>
+      <span>Web Development</span>
+      <span class="dot">/</span>
+      <span>PR &amp; Comms</span>
+      <span class="dot">/</span>
+      <span>LaunchLink</span>
+      <span class="dot">/</span>
+      <span>Web Design</span>
+      <span class="dot">/</span>
+      <span>Web Development</span>
+      <span class="dot">/</span>
+      <span>PR &amp; Comms</span>
+      <span class="dot">/</span>
+      <span>LaunchLink</span>
     </div>
-  </nav>
+  </div>
 
-  <!-- ─── HERO ──────────────────────────────────────────────── -->
-  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#e63939]/5 rounded-full blur-3xl pointer-events-none"></div>
+  <header class="site-head">
+    <a class="brand" href="/">
+      <img src="../../favicon.svg" alt="" width="22" height="22" />
+      <span>Ventus</span>
+    </a>
+    <nav class="nav">
+      <a href="/portfolio">Work</a>
+      <a class="btn" href="mailto:contact@ventuslabs.co">Contact</a>
+    </nav>
+  </header>
 
-    <div class="relative max-w-4xl mx-auto">
-      <a href="/portfolio" class="inline-flex items-center gap-2 text-gray-500 text-sm hover:text-white transition-colors duration-200 mb-10 group">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 5l-7 7 7 7"/>
-        </svg>
-        All Projects
-      </a>
-
-      <div class="flex justify-center gap-2 mb-6 flex-wrap">
-        <span class="tag">Web Design</span>
-        <span class="tag">Web Development</span>
-        <span class="tag">PR & Comms</span>
-      </div>
-
-      <h1 class="text-6xl sm:text-7xl md:text-8xl font-black tracking-tight leading-none mb-6">
-        LaunchLink
+  <main id="main">
+    <section class="hero hero--case">
+      <a class="back" href="/portfolio">← All work</a>
+      <p class="hero-index">02 / Live</p>
+      <h1>
+        <span class="hero-line"><span>Launch</span></span>
+        <span class="hero-line"><span><em>Link</em></span></span>
       </h1>
-      <p class="text-2xl sm:text-3xl font-bold text-gray-300 mb-6 tracking-tight">
-        PR for the world's<br/>
-        <span class="text-[#e63939]">fastest-moving tech brands.</span>
-      </p>
-
-      <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-        Full website design and build for LaunchLink Communications, a specialist PR agency helping technology brands and startups become household names.
-      </p>
-
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://launchlink.co" target="_blank" rel="noopener noreferrer"
-           class="btn-primary bg-[#e63939] text-white font-bold text-base px-8 py-4 rounded-xl inline-flex items-center gap-2 justify-center">
-          View Live Site
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M7 17L17 7M17 7H7M17 7v10"/>
-          </svg>
-        </a>
+      <p class="hero-kicker">PR for the world’s <em>fastest-moving tech brands.</em></p>
+      <div class="hero-foot">
+        <p>Full website design and build for LaunchLink Communications, a specialist PR agency helping technology brands and startups become household names.</p>
+        <a class="btn" href="https://launchlink.co" target="_blank" rel="noopener noreferrer">View live site</a>
       </div>
-    </div>
+      <ul class="tags">
+        <li>Web Design</li>
+        <li>Web Development</li>
+        <li>PR &amp; Comms</li>
+      </ul>
+    </section>
 
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
-      <div class="w-px h-10 bg-white"></div>
-    </div>
-    <div class="hero-fade absolute inset-0 pointer-events-none"></div>
-  </section>
-
-  <!-- ─── THE BRIEF ──────────────────────────────────────────── -->
-  <section class="py-28 px-6 border-t border-white/5">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">The Brief</p>
-      <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-8">
-        A site that moves as fast<br/>as their clients.
-      </h2>
-      <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-16">
-        LaunchLink needed a website that matched the energy of the tech brands they represent: bold, confident, and credible. A platform to clearly communicate their specialist positioning and convert fast-moving founders into clients.
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-7 text-left">
-          <div class="text-[#e63939] mb-4">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-base mb-2">Brand Positioning</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Translate LaunchLink's specialist PR focus into a clear, confident digital identity that speaks directly to tech founders.</p>
-        </div>
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-7 text-left">
-          <div class="text-[#e63939] mb-4">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-base mb-2">Fully Responsive</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Designed and built to perform flawlessly across desktop, tablet, and mobile. No compromises.</p>
-        </div>
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-7 text-left">
-          <div class="text-[#e63939] mb-4">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-base mb-2">Performance First</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Fast load times and clean code, because a slow site is a bad first impression for a PR firm's prospects.</p>
-        </div>
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">The brief</p>
+        <h2>A site that moves as fast as their clients.</h2>
       </div>
-    </div>
-  </section>
-
-  <!-- ─── TECH STACK ────────────────────────────────────────── -->
-  <section class="py-28 px-6 border-t border-white/5">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">Under the Hood</p>
-        <h2 class="text-4xl sm:text-5xl font-black tracking-tight">Built to last</h2>
+      <div class="wrap prose">
+        <p>LaunchLink needed a website that matched the energy of the tech brands they represent: bold, confident, and credible. A platform to clearly communicate their specialist positioning and convert fast-moving founders into clients.</p>
       </div>
+      <ol class="blotter" style="margin-top:2.4rem">
+        <li>
+          <span class="n">01</span>
+          <h3>Brand Positioning</h3>
+          <p>Translate LaunchLink’s specialist PR focus into a clear, confident digital identity that speaks directly to tech founders.</p>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <h3>Fully Responsive</h3>
+          <p>Designed and built to perform flawlessly across desktop, tablet, and mobile. No compromises.</p>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <h3>Performance First</h3>
+          <p>Fast load times and clean code, because a slow site is a bad first impression for a PR firm’s prospects.</p>
+        </li>
+      </ol>
+    </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-7 text-center">
-          <div class="text-[#e63939] mb-4 flex justify-center">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-base mb-1">HTML / CSS</h3>
-          <p class="text-gray-500 text-sm">Semantic, accessible markup with clean, maintainable styles.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-7 text-center">
-          <div class="text-[#e63939] mb-4 flex justify-center">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-base mb-1">JavaScript</h3>
-          <p class="text-gray-500 text-sm">Lightweight interactions and animations with no heavy frameworks.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-7 text-center">
-          <div class="text-[#e63939] mb-4 flex justify-center">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-base mb-1">Responsive Design</h3>
-          <p class="text-gray-500 text-sm">Mobile-first layout that adapts across every screen size.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-7 text-center">
-          <div class="text-[#e63939] mb-4 flex justify-center">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 1 0-.1-9.999 5.002 5.002 0 0 0-9.78 2.096A4.001 4.001 0 0 0 3 15z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-base mb-1">AWS</h3>
-          <p class="text-gray-500 text-sm">Fast global CDN hosting with continuous deployment.</p>
-        </div>
-
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">Under the hood</p>
+        <h2>Built to last</h2>
       </div>
-    </div>
-  </section>
-
-  <!-- ─── CTA ───────────────────────────────────────────────── -->
-  <section class="relative py-36 px-6 border-t border-white/5">
-    <div class="max-w-3xl mx-auto text-center">
-      <div class="absolute left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#e63939]/6 rounded-full blur-3xl pointer-events-none"></div>
-
-      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-6">See it live</p>
-      <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
-        Visit launchlink.co
-      </h2>
-      <p class="text-gray-400 text-lg mb-12">
-        See the finished site in the wild.
-      </p>
-
-      <a href="https://launchlink.co" target="_blank" rel="noopener noreferrer"
-         class="btn-primary inline-flex items-center gap-2 bg-[#e63939] text-white font-bold text-lg px-10 py-5 rounded-xl mb-8">
-        View Live Site
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M7 17L17 7M17 7H7M17 7v10"/>
-        </svg>
-      </a>
-
-      <div class="border-t border-white/5 pt-8 mt-4">
-        <p class="text-gray-600 text-sm mb-1">Built by Ventus Labs</p>
-        <a href="mailto:contact@ventuslabs.co" class="text-gray-400 hover:text-[#e63939] transition-colors duration-200 text-sm">
-          contact@ventuslabs.co
-        </a>
+      <div class="board">
+        <article>
+          <strong>HTML</strong>
+          <p>Semantic, accessible markup with clean, maintainable styles.</p>
+        </article>
+        <article>
+          <strong>JS</strong>
+          <p>Lightweight interactions and animations with no heavy frameworks.</p>
+        </article>
+        <article>
+          <strong>RWD</strong>
+          <p>Mobile-first layout that adapts across every screen size.</p>
+        </article>
+        <article>
+          <strong>AWS</strong>
+          <p>Fast global CDN hosting with continuous deployment.</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── FOOTER ─────────────────────────────────────────────── -->
-  <footer class="border-t border-white/5 py-10 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2.5">
-        <svg width="22" height="22" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-          <defs><clipPath id="ccf"><circle cx="18" cy="18" r="16"/></clipPath></defs>
-          <g clip-path="url(#ccf)">
-            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
-          </g>
-        </svg>
-        <span class="text-gray-500 text-sm font-semibold">Ventus Labs</span>
-      </div>
-      <p class="text-gray-600 text-sm">&copy; 2026 Ventus Labs. All rights reserved.</p>
-      <a href="mailto:contact@ventuslabs.co" class="text-gray-600 text-sm hover:text-[#e63939] transition-colors duration-200">
-        contact@ventuslabs.co
-      </a>
-    </div>
+    <section class="cta">
+      <p class="idx">See it live</p>
+      <h2>Visit launchlink.co</h2>
+      <p>See the finished site in the wild.</p>
+      <a class="btn" href="https://launchlink.co" target="_blank" rel="noopener noreferrer">View live site</a>
+      <p class="note">Built by Ventus Labs — <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a></p>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <span>Ventus Labs</span>
+    <span>© 2026</span>
+    <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a>
   </footer>
-
 </body>
 </html>

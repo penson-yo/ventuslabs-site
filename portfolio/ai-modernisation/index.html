@@ -6,317 +6,166 @@
   <meta name="description" content="Ventus Labs helps traditional businesses integrate AI into their daily operations — automating repetitive tasks and unlocking capacity that already exists." />
   <title>AI Modernisation: Ventus Labs</title>
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            red: { 600: '#e63939', 500: '#ff2d2d' }
-          },
-          fontFamily: {
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { background-color: #0a0a0a; }
-
-    .service-card {
-      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-    }
-    .service-card:hover {
-      border-color: #e63939;
-      box-shadow: 0 0 32px rgba(230, 57, 57, 0.15), 0 16px 40px rgba(0,0,0,0.4);
-      transform: translateY(-6px);
-    }
-
-    .btn-primary {
-      transition: background-color 0.2s ease, transform 0.15s ease;
-    }
-    .btn-primary:hover {
-      background-color: #ff2d2d;
-      transform: translateY(-1px);
-    }
-
-    .hero-fade {
-      background: linear-gradient(to bottom, transparent 80%, #0a0a0a 100%);
-    }
-
-    .tag {
-      display: inline-block;
-      background: rgba(230, 57, 57, 0.1);
-      border: 1px solid rgba(230, 57, 57, 0.2);
-      color: #e63939;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 999px;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/site.css" />
 </head>
-<body class="text-white font-sans antialiased">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- NAVBAR -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-white/5">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="../../index.html" class="flex items-center gap-3 group">
-        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-          <defs><clipPath id="cc"><circle cx="18" cy="18" r="16"/></clipPath></defs>
-          <g clip-path="url(#cc)">
-            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
-          </g>
-        </svg>
-        <span class="text-white font-bold text-lg tracking-tight">Ventus Labs</span>
-      </a>
-      <div class="flex items-center gap-6">
-        <a href="/portfolio" class="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200">Portfolio</a>
-        <a href="mailto:contact@ventuslabs.co"
-           class="btn-primary bg-[#e63939] text-white text-sm font-semibold px-5 py-2.5 rounded-lg">
-          Get In Touch
-        </a>
-      </div>
+  <div class="tape" aria-hidden="true">
+    <div class="tape-track">
+      <span>AI Integration</span>
+      <span class="dot">/</span>
+      <span>Automation</span>
+      <span class="dot">/</span>
+      <span>Business Ops</span>
+      <span class="dot">/</span>
+      <span>Invoicing</span>
+      <span class="dot">/</span>
+      <span>Scheduling</span>
+      <span class="dot">/</span>
+      <span>Reporting</span>
+      <span class="dot">/</span>
+      <span>AI Integration</span>
+      <span class="dot">/</span>
+      <span>Automation</span>
+      <span class="dot">/</span>
+      <span>Business Ops</span>
+      <span class="dot">/</span>
+      <span>Invoicing</span>
+      <span class="dot">/</span>
+      <span>Scheduling</span>
+      <span class="dot">/</span>
+      <span>Reporting</span>
     </div>
-  </nav>
+  </div>
 
-  <!-- HERO -->
-  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#e63939]/5 rounded-full blur-3xl pointer-events-none"></div>
+  <header class="site-head">
+    <a class="brand" href="/">
+      <img src="../../favicon.svg" alt="" width="22" height="22" />
+      <span>Ventus</span>
+    </a>
+    <nav class="nav">
+      <a href="/portfolio">Work</a>
+      <a class="btn" href="mailto:contact@ventuslabs.co">Contact</a>
+    </nav>
+  </header>
 
-    <div class="relative max-w-4xl mx-auto">
-      <a href="/portfolio" class="inline-flex items-center gap-2 text-gray-500 text-sm hover:text-white transition-colors duration-200 mb-10 group">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 5l-7 7 7 7"/>
-        </svg>
-        All Projects
-      </a>
-
-      <div class="flex justify-center gap-2 mb-6 flex-wrap">
-        <span class="tag">AI Integration</span>
-        <span class="tag">Automation</span>
-        <span class="tag">Business Ops</span>
-      </div>
-
-      <h1 class="text-6xl sm:text-7xl md:text-8xl font-black tracking-tight leading-none mb-6">
-        AI Modernisation
+  <main id="main">
+    <section class="hero hero--case">
+      <a class="back" href="/portfolio">← All work</a>
+      <p class="hero-index">05 / Offer</p>
+      <h1>
+        <span class="hero-line"><span>AI</span></span>
+        <span class="hero-line"><span><em>Modernisation</em></span></span>
       </h1>
-      <p class="text-2xl sm:text-3xl font-bold text-gray-300 mb-6 tracking-tight">
-        Stop doing manually<br/>
-        <span class="text-[#e63939]">what AI can do for you.</span>
-      </p>
-
-      <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-        We work with traditional businesses to identify the workflows eating their time and replace them with AI-powered systems. Less repetition, faster turnaround, and staff freed up for the work that actually matters.
-      </p>
-
-      <a href="mailto:contact@ventuslabs.co"
-         class="btn-primary inline-flex items-center gap-2 bg-[#e63939] text-white font-bold text-base px-8 py-4 rounded-xl justify-center">
-        Talk to Us
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M7 17L17 7M17 7H7M17 7v10"/>
-        </svg>
-      </a>
-    </div>
-
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
-      <div class="w-px h-10 bg-white"></div>
-    </div>
-    <div class="hero-fade absolute inset-0 pointer-events-none"></div>
-  </section>
-
-  <!-- THE PROBLEM -->
-  <section class="py-28 px-6 border-t border-white/5">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">The Reality</p>
-      <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-8">
-        Most businesses are running<br/>on outdated workflows.
-      </h2>
-      <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-        Chasing invoices by hand. Copy-pasting between spreadsheets. Manually responding to the same customer questions over and over. These tasks don't require skill — they require time. Time that could be spent on customers, growth, or just leaving on time. We help you get it back.
-      </p>
-    </div>
-  </section>
-
-  <!-- WHAT WE AUTOMATE -->
-  <section class="py-28 px-6 border-t border-white/5">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">What We Automate</p>
-        <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-4">Common workflows, solved.</h2>
-        <p class="text-gray-400 text-lg max-w-xl mx-auto">If your team does it more than once a week and it follows a pattern, it can probably be automated.</p>
+      <p class="hero-kicker">Stop doing manually <em>what AI can do for you.</em></p>
+      <div class="hero-foot">
+        <p>We work with traditional businesses to identify the workflows eating their time and replace them with AI-powered systems. Less repetition, faster turnaround, and staff freed up for the work that actually matters.</p>
+        <a class="btn" href="mailto:contact@ventuslabs.co">Talk to us</a>
       </div>
+      <ul class="tags">
+        <li>AI Integration</li>
+        <li>Automation</li>
+        <li>Business Ops</li>
+      </ul>
+    </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
-          <div class="text-[#e63939] mb-4">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-bold text-lg mb-2">Customer Communications</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Automated replies to enquiries, booking confirmations, follow-ups, and FAQs. Your customers get instant responses around the clock without anyone lifting a finger.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
-          <div class="text-[#e63939] mb-4">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-bold text-lg mb-2">Bookings and Scheduling</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Online booking flows, automated reminders, cancellation handling, and calendar syncing. No more back-and-forth to find a time that works.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
-          <div class="text-[#e63939] mb-4">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-bold text-lg mb-2">Invoicing and Payments</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Automatic invoice generation, payment reminders, and reconciliation. Get paid faster without chasing anyone.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
-          <div class="text-[#e63939] mb-4">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-bold text-lg mb-2">Staff Operations</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Rostering, shift reminders, onboarding paperwork, and internal comms. Free up management time from admin-heavy HR work.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
-          <div class="text-[#e63939] mb-4">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-bold text-lg mb-2">Marketing and Social</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Content drafting, social post scheduling, review responses, and email campaigns. Maintain a consistent presence without dedicating hours to it each week.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/8 rounded-2xl p-8">
-          <div class="text-[#e63939] mb-4">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-bold text-lg mb-2">Reporting and Insights</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Automated weekly summaries, sales reports, and performance snapshots delivered straight to your inbox. Know what's happening in your business without digging for it.</p>
-        </div>
-
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">The reality</p>
+        <h2>Most businesses are running on outdated workflows.</h2>
       </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="py-28 px-6 border-t border-white/5">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-4">How It Works</p>
-        <h2 class="text-4xl sm:text-5xl font-black tracking-tight">Simple process. Real results.</h2>
+      <div class="wrap prose">
+        <p>Chasing invoices by hand. Copy-pasting between spreadsheets. Manually responding to the same customer questions over and over. These tasks don’t require skill — they require time. Time that could be spent on customers, growth, or just leaving on time. We help you get it back.</p>
       </div>
+    </section>
 
-      <div class="space-y-6 max-w-2xl mx-auto">
-        <div class="relative flex gap-6 items-start">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#e63939] flex items-center justify-center font-black text-sm">1</div>
-          <div class="pt-1.5">
-            <h3 class="font-bold text-lg mb-1">We audit your operations</h3>
-            <p class="text-gray-500 text-base leading-relaxed">We map out how your business actually runs day-to-day, identify the tasks that are eating the most time, and pinpoint where AI can have the biggest immediate impact.</p>
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">What we automate</p>
+        <h2>Common workflows, solved.</h2>
+      </div>
+      <p class="lede">If your team does it more than once a week and it follows a pattern, it can probably be automated.</p>
+      <ol class="blotter">
+        <li>
+          <span class="n">01</span>
+          <h3>Customer Communications</h3>
+          <p>Automated replies to enquiries, booking confirmations, follow-ups, and FAQs. Instant responses around the clock.</p>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <h3>Bookings and Scheduling</h3>
+          <p>Online booking flows, automated reminders, cancellation handling, and calendar syncing. No more back-and-forth.</p>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <h3>Invoicing and Payments</h3>
+          <p>Automatic invoice generation, payment reminders, and reconciliation. Get paid faster without chasing anyone.</p>
+        </li>
+        <li>
+          <span class="n">04</span>
+          <h3>Staff Operations</h3>
+          <p>Rostering, shift reminders, onboarding paperwork, and internal comms. Free management time from admin-heavy HR work.</p>
+        </li>
+        <li>
+          <span class="n">05</span>
+          <h3>Marketing and Social</h3>
+          <p>Content drafting, social post scheduling, review responses, and email campaigns. Consistent presence without the hours.</p>
+        </li>
+        <li>
+          <span class="n">06</span>
+          <h3>Reporting and Insights</h3>
+          <p>Automated weekly summaries, sales reports, and performance snapshots delivered to your inbox.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">How it works</p>
+        <h2>Simple process. Real results.</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="n">01</span>
+          <div>
+            <h3>We audit your operations</h3>
+            <p>We map out how your business actually runs day-to-day, identify the tasks that are eating the most time, and pinpoint where AI can have the biggest immediate impact.</p>
           </div>
-        </div>
-
-        <div class="relative flex gap-6 items-start">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#111111] border border-white/10 flex items-center justify-center font-black text-sm">2</div>
-          <div class="pt-1.5">
-            <h3 class="font-bold text-lg mb-1">We build and integrate</h3>
-            <p class="text-gray-500 text-base leading-relaxed">We build the automations and integrations using the right tools for your stack. No ripping out what works. We bolt onto your existing systems and remove friction.</p>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <div>
+            <h3>We build and integrate</h3>
+            <p>We build the automations and integrations using the right tools for your stack. No ripping out what works. We bolt onto your existing systems and remove friction.</p>
           </div>
-        </div>
-
-        <div class="relative flex gap-6 items-start">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#111111] border border-white/10 flex items-center justify-center font-black text-sm">3</div>
-          <div class="pt-1.5">
-            <h3 class="font-bold text-lg mb-1">We hand it over</h3>
-            <p class="text-gray-500 text-base leading-relaxed">We train your team, document everything, and make sure the system runs without us. You own it. No ongoing dependency, no lock-in.</p>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <div>
+            <h3>We hand it over</h3>
+            <p>We train your team, document everything, and make sure the system runs without us. You own it. No ongoing dependency, no lock-in.</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </li>
+      </ol>
+    </section>
 
-  <!-- CTA -->
-  <section class="relative py-36 px-6 border-t border-white/5">
-    <div class="max-w-3xl mx-auto text-center">
-      <div class="absolute left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#e63939]/6 rounded-full blur-3xl pointer-events-none"></div>
+    <section class="cta">
+      <p class="idx">Get started</p>
+      <h2>Ready to stop doing it the hard way?</h2>
+      <p>Tell us about your business and where your time is going. We’ll show you what’s possible.</p>
+      <a class="btn" href="mailto:contact@ventuslabs.co">Get in touch</a>
+      <p class="note">Built by Ventus Labs — <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a></p>
+    </section>
+  </main>
 
-      <p class="text-[#e63939] text-sm font-semibold uppercase tracking-widest mb-6">Get started</p>
-      <h2 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-4">
-        Ready to stop doing<br/>it the hard way?
-      </h2>
-      <p class="text-gray-400 text-lg mb-12">
-        Tell us about your business and where your time is going. We'll show you what's possible.
-      </p>
-
-      <a href="mailto:contact@ventuslabs.co"
-         class="btn-primary inline-flex items-center gap-2 bg-[#e63939] text-white font-bold text-lg px-10 py-5 rounded-xl mb-8">
-        Get In Touch
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M7 17L17 7M17 7H7M17 7v10"/>
-        </svg>
-      </a>
-
-      <div class="border-t border-white/5 pt-8 mt-4">
-        <p class="text-gray-600 text-sm mb-1">Built by Ventus Labs</p>
-        <a href="mailto:contact@ventuslabs.co" class="text-gray-400 hover:text-[#e63939] transition-colors duration-200 text-sm">
-          contact@ventuslabs.co
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-white/5 py-10 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2.5">
-        <svg width="22" height="22" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-          <defs><clipPath id="ccf"><circle cx="18" cy="18" r="16"/></clipPath></defs>
-          <g clip-path="url(#ccf)">
-            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
-          </g>
-        </svg>
-        <span class="text-gray-500 text-sm font-semibold">Ventus Labs</span>
-      </div>
-      <p class="text-gray-600 text-sm">&copy; 2026 Ventus Labs. All rights reserved.</p>
-      <a href="mailto:contact@ventuslabs.co" class="text-gray-600 text-sm hover:text-[#e63939] transition-colors duration-200">
-        contact@ventuslabs.co
-      </a>
-    </div>
+  <footer class="colophon">
+    <span>Ventus Labs</span>
+    <span>© 2026</span>
+    <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a>
   </footer>
-
 </body>
 </html>

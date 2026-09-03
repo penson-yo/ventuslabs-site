@@ -3,316 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ventus Labs builds production web and mobile apps, AI systems, and workflow automation for founders and teams." />
-  <title>Ventus Labs: Custom Software & Apps</title>
+  <meta name="description" content="Ventus Labs builds high-performance custom software, web & mobile applications, and workflow automation systems for founders and teams." />
+  <title>Ventus Labs: High-Performance Custom Software & Apps</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="preconnect" href="https://fonts.bunny.net">
-  <link href="https://fonts.bunny.net/css?family=ibm-plex-mono:400,500|ibm-plex-sans:400,500,600,700" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            red: {
-              600: '#e63939',
-              500: '#ff2d2d',
-            }
-          },
-          fontFamily: {
-            sans: ['IBM Plex Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-            mono: ['IBM Plex Mono', 'SFMono-Regular', 'Consolas', 'Monaco', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      background-color: #0a0a0a;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .dot-logo {
-      display: inline-block;
-      flex-shrink: 0;
-    }
-
-    .service-card,
-    .stat-card {
-      transition: border-color 0.2s ease, background-color 0.2s ease;
-    }
-    .service-card:hover,
-    .stat-card:hover {
-      border-color: rgba(230, 57, 57, 0.45);
-      background-color: #141414;
-    }
-
-    .btn-primary {
-      transition: background-color 0.2s ease;
-    }
-    .btn-primary:hover {
-      background-color: #ff2d2d;
-    }
-    .btn-secondary {
-      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
-    }
-    .btn-secondary:hover {
-      border-color: #e63939;
-      color: #e63939;
-      background-color: rgba(230, 57, 57, 0.04);
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
 </head>
-<body class="text-white font-sans antialiased">
+<body class="is-gated">
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-white/5">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+  <div id="gate" class="gate" role="button" tabindex="0" aria-label="Enter Ventus Labs">
+    <canvas id="gate-canvas"></canvas>
+    <p class="gate-hint">Click the mark</p>
+  </div>
 
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-3">
-        <svg class="dot-logo" width="32" height="32" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <clipPath id="circle-clip">
-              <circle cx="18" cy="18" r="16"/>
-            </clipPath>
-          </defs>
-          <g clip-path="url(#circle-clip)">
-            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
-          </g>
-        </svg>
-        <span class="text-white font-semibold text-base tracking-tight">Ventus Labs</span>
-      </a>
-
-      <div class="flex items-center gap-6">
-        <a href="/portfolio" class="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200">Portfolio</a>
-        <a href="mailto:contact@ventuslabs.co"
-           class="btn-primary bg-[#e63939] text-white text-sm font-semibold px-4 py-2 rounded-lg">
-          Get in touch
-        </a>
-      </div>
+  <div class="tape" aria-hidden="true">
+    <div class="tape-track">
+      <span>Web &amp; Mobile</span><span class="dot">/</span>
+      <span>Automation</span><span class="dot">/</span>
+      <span>Internal Tools</span><span class="dot">/</span>
+      <span>AI Software</span><span class="dot">/</span>
+      <span>Architecture</span><span class="dot">/</span>
+      <span>FinTech</span><span class="dot">/</span>
+      <span>iOS</span><span class="dot">/</span>
+      <span>Web &amp; Mobile</span><span class="dot">/</span>
+      <span>Automation</span><span class="dot">/</span>
+      <span>Internal Tools</span><span class="dot">/</span>
+      <span>AI Software</span><span class="dot">/</span>
+      <span>Architecture</span><span class="dot">/</span>
+      <span>FinTech</span><span class="dot">/</span>
+      <span>iOS</span><span class="dot">/</span>
     </div>
-  </nav>
+  </div>
 
-  <!-- ─── HERO ──────────────────────────────────────────────── -->
-  <section class="relative flex flex-col items-center justify-center text-center px-6 pt-36 pb-28 min-h-[85vh]">
-    <div class="relative max-w-3xl mx-auto">
-      <p class="font-mono text-[#e63939] text-xs font-medium uppercase tracking-[0.16em] mb-6">AI-augmented studio</p>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.1] mb-6">
-        Custom software<br/>
-        <span class="text-[#e63939]"><em>that actually works.</em></span>
+  <header class="site-head">
+    <a class="brand" href="/">
+      <img src="favicon.svg" alt="" width="22" height="22" />
+      <span>Ventus</span>
+    </a>
+    <nav class="nav">
+      <a href="/portfolio">Work</a>
+      <a class="btn" href="mailto:contact@ventuslabs.co">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <p class="hero-ghost" aria-hidden="true">VL</p>
+      <p class="hero-index">01 / AI-augmented studio</p>
+      <h1>
+        <span class="hero-line"><span>Custom</span></span>
+        <span class="hero-line"><span>Software</span></span>
+        <span class="hero-line"><span>That Actually</span></span>
+        <span class="hero-line"><span><em>Works.</em></span></span>
       </h1>
-
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-        We design, build, and ship web and mobile products, AI-backed systems,
-        and the integrations that keep operations moving.
-      </p>
-
-      <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="mailto:contact@ventuslabs.co"
-           class="btn-primary bg-[#e63939] text-white font-semibold text-sm px-7 py-3.5 rounded-lg">
-          Start a project
-        </a>
-        <a href="#services"
-           class="btn-secondary border border-white/15 text-white font-medium text-sm px-7 py-3.5 rounded-lg">
-          See what we build
-        </a>
+      <div class="hero-foot">
+        <p>We design, build, and deploy high-performance web &amp; mobile applications, internal dashboards, and custom integrations that drive real business results.</p>
+        <a class="btn" href="mailto:contact@ventuslabs.co">Start a Project</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── WHAT WE BUILD ─────────────────────────────────────── -->
-  <section id="services" class="py-24 px-6 border-t border-white/5">
-    <div class="max-w-5xl mx-auto">
-      <div class="mb-12 max-w-2xl">
-        <p class="font-mono text-[#e63939] text-xs font-medium uppercase tracking-[0.16em] mb-3">Services</p>
-        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">What we build</h2>
+    <section class="section" id="services">
+      <div class="section-head">
+        <p class="idx">02 / Capabilities</p>
+        <h2>What we build</h2>
       </div>
+      <ol class="blotter">
+        <li>
+          <span class="n">01</span>
+          <h3>Custom Web &amp; Mobile Apps</h3>
+          <p>Full-stack premium products engineered from database to interface. Built to be responsive, fast, secure, and tailored to your specific business needs.</p>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <h3>Workflow Automation &amp; Integrations</h3>
+          <p>Connect your tools, data stores, CRMs, spreadsheets, and external APIs. We build reliable middleware and background jobs that keep your operations running smoothly.</p>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <h3>Internal Tools &amp; Dashboards</h3>
+          <p>Custom admin panels, client portals, analytics dashboards, and operations tools built around how your company actually functions.</p>
+        </li>
+        <li>
+          <span class="n">04</span>
+          <h3>AI-Powered Software</h3>
+          <p>Full-stack applications with AI built into the core experience. We integrate LLMs, vector search, and structured output to solve complex data challenges.</p>
+        </li>
+        <li>
+          <span class="n">05</span>
+          <h3>Tech Strategy &amp; Architecture</h3>
+          <p>We audit legacy codebase structures, design modern technical roadmaps, and plan scalable system architectures before writing a single line of code.</p>
+        </li>
+        <li>
+          <span class="n">06</span>
+          <h3>Trading &amp; FinTech Systems</h3>
+          <p>Specialized low-latency trading bots, crypto integrations, automated portfolio management workflows, and financial risk checks.</p>
+        </li>
+      </ol>
+    </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-        <div class="service-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <div class="text-[#e63939] mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2">Custom Web & Mobile Apps</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Full-stack web and mobile products from database to interface: responsive, fast, secure, and built around how your business actually works.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <div class="text-[#e63939] mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2">Workflow Automation & Integrations</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Connect your tools, data stores, CRMs, spreadsheets, and APIs with reliable middleware and background jobs that remove manual bottlenecks.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <div class="text-[#e63939] mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2">Internal Tools & Dashboards</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Admin panels, client portals, analytics dashboards, and ops tools shaped around how your company actually runs day to day.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <div class="text-[#e63939] mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 8v4l3 3"/><circle cx="19" cy="5" r="3"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2">AI-Powered Software</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Applications with AI in the core workflow. We integrate LLMs, grounding, and structured outputs where they create real leverage.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <div class="text-[#e63939] mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M2 20h20M6 20V10M12 20V4M18 20v-8"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2">Tech Strategy & Architecture</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">We audit legacy systems, design practical technical roadmaps, and plan architectures that can ship and scale.</p>
-        </div>
-
-        <div class="service-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <div class="text-[#e63939] mb-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-white font-semibold text-base mb-2">Trading & FinTech Systems</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Low-latency trading bots, crypto API integrations, portfolio automation, and real-time risk controls.</p>
-        </div>
-
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">03 / Why it matters</p>
+        <h2>Built for results</h2>
       </div>
-    </div>
-  </section>
-
-  <!-- ─── PROOF / STATS ─────────────────────────────────────── -->
-  <section class="py-24 px-6 border-t border-white/5">
-    <div class="max-w-5xl mx-auto">
-      <div class="mb-12 max-w-2xl">
-        <p class="font-mono text-[#e63939] text-xs font-medium uppercase tracking-[0.16em] mb-3">Why it matters</p>
-        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Built for real results</h2>
+      <div class="board">
+        <article>
+          <strong>Prod</strong>
+          <p>Reliable, secure, and production-ready applications built to scale with your company.</p>
+        </article>
+        <article>
+          <strong>Hours</strong>
+          <p>Automate complex backend workflows, operational bottlenecks, and manual operations.</p>
+        </article>
+        <article>
+          <strong>Fast</strong>
+          <p>From brief to deployed. We move quickly and ship clean, highly-optimized systems.</p>
+        </article>
+        <article>
+          <strong>Bespoke</strong>
+          <p>No templates. Every script, integration, and user interface is custom-tailored to your business.</p>
+        </article>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-
-        <div class="stat-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <p class="text-[#e63939] font-mono text-sm font-medium uppercase tracking-wider mb-3">Production</p>
-          <p class="text-gray-400 text-sm leading-relaxed">Reliable, secure systems built to run in production and grow with your company.</p>
-        </div>
-
-        <div class="stat-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <p class="text-[#e63939] font-mono text-sm font-medium uppercase tracking-wider mb-3">Hours saved</p>
-          <p class="text-gray-400 text-sm leading-relaxed">Automate the backend workflows and manual ops that quietly eat your week.</p>
-        </div>
-
-        <div class="stat-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <p class="text-[#e63939] font-mono text-sm font-medium uppercase tracking-wider mb-3">Fast</p>
-          <p class="text-gray-400 text-sm leading-relaxed">From brief to deployed. We move quickly and ship clean, maintainable systems.</p>
-        </div>
-
-        <div class="stat-card bg-[#111111] border border-white/10 rounded-xl p-7">
-          <p class="text-[#e63939] font-mono text-sm font-medium uppercase tracking-wider mb-3">Custom</p>
-          <p class="text-gray-400 text-sm leading-relaxed">No templates. Every interface, integration, and workflow is built for your process.</p>
-        </div>
-
+    <section class="section" id="work">
+      <div class="section-head">
+        <p class="idx">04 / Book</p>
+        <h2>Things we’ve built</h2>
       </div>
-    </div>
-  </section>
-
-  <!-- ─── WORK / PROJECTS ─────────────────────────────────── -->
-  <section id="work" class="py-24 px-6 border-t border-white/5">
-    <div class="max-w-5xl mx-auto">
-      <div class="mb-8 max-w-2xl">
-        <p class="font-mono text-[#e63939] text-xs font-medium uppercase tracking-[0.16em] mb-3">Work</p>
-        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">Things we've built</h2>
-        <p class="text-gray-400 text-base leading-relaxed mb-8">Apps, agents, and tools shipped by Ventus Labs.</p>
-        <a href="/portfolio"
-           class="btn-secondary inline-flex items-center gap-2 border border-white/15 text-white font-medium text-sm px-6 py-3 rounded-lg">
-          View portfolio
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M7 17L17 7M17 7H7M17 7v10"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CTA ───────────────────────────────────────────────── -->
-  <section id="contact" class="py-28 px-6 border-t border-white/5">
-    <div class="max-w-2xl mx-auto text-center">
-      <p class="font-mono text-[#e63939] text-xs font-medium uppercase tracking-[0.16em] mb-5">Ready to build?</p>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-5">
-        Let's build your next custom software system.
-      </h2>
-      <p class="text-gray-400 text-base mb-10 leading-relaxed">
-        Tell us the bottleneck you want to solve. We'll design, architect, and build the software to handle it.
-      </p>
-
-      <a href="mailto:contact@ventuslabs.co"
-         class="btn-primary inline-block bg-[#e63939] text-white font-semibold text-sm px-8 py-3.5 rounded-lg mb-6">
-        Get in touch
+      <a class="blotter-row" href="/portfolio">
+        <span class="n">→</span>
+        <span class="st">Open</span>
+        <h2>The work</h2>
+        <p>Apps, agents, and tools shipped by Ventus Labs. Web, iOS, and custom systems.</p>
       </a>
+    </section>
 
-      <p class="text-gray-500 text-sm">
-        Or email us at
-        <a href="mailto:contact@ventuslabs.co" class="text-gray-300 hover:text-[#e63939] transition-colors duration-200">
-          contact@ventuslabs.co
-        </a>
-      </p>
-    </div>
-  </section>
+    <section class="cta" id="contact">
+      <p class="idx">05 / Now</p>
+      <h2>Let’s build your next system.</h2>
+      <p>Tell us the bottleneck you want to solve. We’ll design, architect, and build the custom software to handle it.</p>
+      <a class="btn" href="mailto:contact@ventuslabs.co">Get in touch</a>
+      <p class="note">Or write directly — <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a></p>
+    </section>
+  </main>
 
-  <!-- ─── FOOTER ─────────────────────────────────────────────── -->
-  <footer class="border-t border-white/5 py-8 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2.5">
-        <svg width="20" height="20" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <clipPath id="circle-clip-footer">
-              <circle cx="18" cy="18" r="16"/>
-            </clipPath>
-          </defs>
-          <g clip-path="url(#circle-clip-footer)">
-            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
-          </g>
-        </svg>
-        <span class="text-gray-500 text-sm font-medium">Ventus Labs</span>
-      </div>
-      <p class="text-gray-600 text-sm">&copy; 2026 Ventus Labs. All rights reserved.</p>
-      <a href="mailto:contact@ventuslabs.co" class="text-gray-600 text-sm hover:text-[#e63939] transition-colors duration-200">
-        contact@ventuslabs.co
-      </a>
-    </div>
+  <footer class="colophon">
+    <span>Ventus Labs</span>
+    <span>© 2026</span>
+    <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a>
   </footer>
-
+  <noscript>
+    <style>.gate { display: none; } body.is-gated { overflow: auto; }</style>
+  </noscript>
+  <script type="module" src="js/gate.js"></script>
 </body>
 </html>

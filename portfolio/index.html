@@ -6,309 +6,135 @@
   <meta name="description" content="Work built by Ventus Labs: Custom web apps, iOS applications, and high-performance software." />
   <title>Portfolio: Ventus Labs</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-  <link rel="preconnect" href="https://fonts.bunny.net">
-  <link href="https://fonts.bunny.net/css?family=ibm-plex-mono:400,500|ibm-plex-sans:400,500,600,700" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            red: { 600: '#e63939', 500: '#ff2d2d' }
-          },
-          fontFamily: {
-            sans: ['IBM Plex Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-            mono: ['IBM Plex Mono', 'SFMono-Regular', 'Consolas', 'Monaco', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      background-color: #0a0a0a;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .service-card {
-      transition: border-color 0.2s ease, background-color 0.2s ease;
-    }
-    .service-card:hover {
-      border-color: rgba(230, 57, 57, 0.45);
-      background-color: #141414;
-    }
-
-    .btn-primary {
-      transition: background-color 0.2s ease;
-    }
-    .btn-primary:hover {
-      background-color: #ff2d2d;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css" />
 </head>
-<body class="text-white font-sans antialiased">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-white/5">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3">
-        <svg width="32" height="32" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><clipPath id="cc"><circle cx="18" cy="18" r="16"/></clipPath></defs>
-          <g clip-path="url(#cc)">
-            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
-          </g>
-        </svg>
-        <span class="text-white font-semibold text-base tracking-tight">Ventus Labs</span>
-      </a>
-      <div class="flex items-center gap-6">
-        <a href="/portfolio" class="text-white text-sm font-medium">Portfolio</a>
-        <a href="mailto:contact@ventuslabs.co"
-           class="btn-primary bg-[#e63939] text-white text-sm font-semibold px-4 py-2 rounded-lg">
-          Get in touch
+  <div class="tape" aria-hidden="true">
+    <div class="tape-track">
+      <span>Pressto AI</span>
+      <span class="dot">/</span>
+      <span>LaunchLink</span>
+      <span class="dot">/</span>
+      <span>Clara</span>
+      <span class="dot">/</span>
+      <span>Stealth</span>
+      <span class="dot">/</span>
+      <span>AI Modernisation</span>
+      <span class="dot">/</span>
+      <span>Personal Agents</span>
+      <span class="dot">/</span>
+      <span>Pressto AI</span>
+      <span class="dot">/</span>
+      <span>LaunchLink</span>
+      <span class="dot">/</span>
+      <span>Clara</span>
+      <span class="dot">/</span>
+      <span>Stealth</span>
+      <span class="dot">/</span>
+      <span>AI Modernisation</span>
+      <span class="dot">/</span>
+      <span>Personal Agents</span>
+    </div>
+  </div>
+
+
+  <header class="site-head">
+    <a class="brand" href="/">
+      <img src="../favicon.svg" alt="" width="22" height="22" />
+      <span>Ventus</span>
+    </a>
+    <nav class="nav">
+      <a class="is-on" href="/portfolio">Work</a>
+      <a class="btn" href="mailto:contact@ventuslabs.co">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--case">
+      <p class="hero-index">Book / 06 entries</p>
+      <h1>
+        <span class="hero-line"><span>Things</span></span>
+        <span class="hero-line"><span>We’ve</span></span>
+        <span class="hero-line"><span><em>Built.</em></span></span>
+      </h1>
+      <div class="hero-foot">
+        <p>Web apps, mobile apps, and custom software shipped by Ventus Labs.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">Live</p>
+        <h2>Completed</h2>
+      </div>
+      <div class="blotter">
+        <a class="blotter-row" href="/portfolio/heypressto">
+          <span class="n">01</span>
+          <span class="st">Live</span>
+          <h2>Pressto AI</h2>
+          <p>Full website design and build for an AI-powered PR platform trained by real PR professionals.</p>
+        </a>
+        <a class="blotter-row" href="/portfolio/launchlink">
+          <span class="n">02</span>
+          <span class="st">Live</span>
+          <h2>LaunchLink</h2>
+          <p>Full website design and build for a specialist PR agency serving the world’s fastest-moving tech brands.</p>
         </a>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <!-- ─── HEADER ───────────────────────────────────────────────── -->
-  <section class="pt-36 pb-14 px-6">
-    <div class="max-w-5xl mx-auto">
-      <div class="max-w-2xl">
-        <p class="font-mono text-[#e63939] text-xs font-medium uppercase tracking-[0.16em] mb-3">Portfolio</p>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight mb-4">Things we've built</h1>
-        <p class="text-gray-400 text-base leading-relaxed">Web apps, mobile apps, and custom software shipped by Ventus Labs.</p>
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">In build</p>
+        <h2>In progress</h2>
       </div>
-    </div>
-  </section>
-
-  <!-- ─── PROJECT GRID ─────────────────────────────────────────── -->
-  <section class="pb-24 px-6">
-    <div class="max-w-5xl mx-auto space-y-16">
-
-      <!-- COMPLETED -->
-      <div>
-        <div class="flex items-center gap-4 mb-8">
-          <p class="text-gray-300 font-medium text-xs uppercase tracking-[0.14em]">Completed</p>
-          <div class="flex-1 h-px bg-white/10"></div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-          <!-- Pressto AI -->
-          <a href="/portfolio/heypressto" class="service-card bg-[#111111] border border-white/10 rounded-xl p-7 block group">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <div class="flex gap-2 flex-wrap mb-3">
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">Web Design</span>
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">AI SaaS</span>
-                </div>
-                <h2 class="text-white font-semibold text-xl tracking-tight">Pressto AI</h2>
-              </div>
-              <svg class="text-gray-600 group-hover:text-[#e63939] transition-colors duration-200 flex-shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6">Full website design and build for an AI-powered PR platform trained by real PR professionals. Built to convert agencies and brands into paying users.</p>
-            <div class="flex gap-2 flex-wrap">
-              <span class="text-gray-600 text-xs">HTML / CSS</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">JavaScript</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Responsive</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">AWS</span>
-            </div>
-          </a>
-
-          <!-- LaunchLink -->
-          <a href="/portfolio/launchlink" class="service-card bg-[#111111] border border-white/10 rounded-xl p-7 block group">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <div class="flex gap-2 flex-wrap mb-3">
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">Web Design</span>
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">Web Dev</span>
-                </div>
-                <h2 class="text-white font-semibold text-xl tracking-tight">LaunchLink</h2>
-              </div>
-              <svg class="text-gray-600 group-hover:text-[#e63939] transition-colors duration-200 flex-shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6">Full website design and build for a specialist PR agency serving the world's fastest-moving tech brands and startups.</p>
-            <div class="flex gap-2 flex-wrap">
-              <span class="text-gray-600 text-xs">HTML / CSS</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">JavaScript</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Responsive</span>
-              <span class="text-gray-700 text-xs">·</span>
-            <span class="text-gray-600 text-xs">AWS</span>
-            </div>
-          </a>
-
-        </div>
+      <div class="blotter">
+        <a class="blotter-row" href="/portfolio/clara">
+          <span class="n">03</span>
+          <span class="st">Beta</span>
+          <h2>Clara</h2>
+          <p>Voice-first capture for ADHD. Speak a thought and Clara transcribes it and routes it into your knowledge system.</p>
+        </a>
+        <a class="blotter-row" href="/portfolio/stealth-running">
+          <span class="n">04</span>
+          <span class="st">Quiet</span>
+          <h2>Stealth Project</h2>
+          <p>A smarter running app for women. AI-powered training plans that adapt to how you actually feel.</p>
+        </a>
       </div>
+    </section>
 
-      <!-- IN PROGRESS -->
-      <div>
-        <div class="flex items-center gap-4 mb-8">
-          <p class="text-gray-300 font-medium text-xs uppercase tracking-[0.14em]">In Progress</p>
-          <div class="flex-1 h-px bg-white/10"></div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-          <!-- Clara -->
-          <a href="/portfolio/clara" class="service-card bg-[#111111] border border-white/10 rounded-xl p-7 block group">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <div class="flex gap-2 flex-wrap mb-3">
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">iOS App</span>
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">AI-Powered</span>
-                </div>
-                <h2 class="text-white font-semibold text-xl tracking-tight">Clara</h2>
-              </div>
-              <svg class="text-gray-600 group-hover:text-[#e63939] transition-colors duration-200 flex-shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6">Voice-first capture for ADHD. Speak a thought and Clara transcribes it and routes it into your knowledge system automatically. No typing, no filing, no friction.</p>
-            <div class="flex gap-2 flex-wrap">
-              <span class="text-gray-600 text-xs">Swift / SwiftUI</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Whisper API</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Claude API</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">iCloud</span>
-            </div>
-          </a>
-
-          <!-- Stealth Running App -->
-          <a href="/portfolio/stealth-running" class="service-card bg-[#111111] border border-white/10 rounded-xl p-7 block group">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <div class="flex gap-2 flex-wrap mb-3">
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">iOS App</span>
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">Women's Health</span>
-                </div>
-                <h2 class="text-white font-semibold text-xl tracking-tight">Stealth Project</h2>
-              </div>
-              <svg class="text-gray-600 group-hover:text-[#e63939] transition-colors duration-200 flex-shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6">A smarter running app for women. AI-powered training plans that adapt to how you actually feel. Currently in active development.</p>
-            <div class="flex gap-2 flex-wrap">
-              <span class="text-gray-600 text-xs">Swift</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">AI-Powered</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Strava</span>
-            </div>
-          </a>
-
-        </div>
+    <section class="section">
+      <div class="section-head">
+        <p class="idx">Open</p>
+        <h2>Services</h2>
       </div>
-
-      <!-- SERVICES -->
-      <div>
-        <div class="flex items-center gap-4 mb-8">
-          <p class="text-gray-300 font-medium text-xs uppercase tracking-[0.14em]">Services</p>
-          <div class="flex-1 h-px bg-white/10"></div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-          <!-- AI Modernisation -->
-          <a href="/portfolio/ai-modernisation" class="service-card bg-[#111111] border border-white/10 rounded-xl p-7 block group">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <div class="flex gap-2 flex-wrap mb-3">
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">AI Integration</span>
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">Automation</span>
-                </div>
-                <h2 class="text-white font-semibold text-xl tracking-tight">AI Modernisation</h2>
-              </div>
-              <svg class="text-gray-600 group-hover:text-[#e63939] transition-colors duration-200 flex-shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6">We audit traditional business operations, identify where time is being lost to repetitive work, and build AI integrations that remove the bottlenecks for good.</p>
-            <div class="flex gap-2 flex-wrap">
-              <span class="text-gray-600 text-xs">Workflow Automation</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">AI Integration</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Business Ops</span>
-            </div>
-          </a>
-
-          <!-- OpenClaw Agents -->
-          <a href="/portfolio/openclaw" class="service-card bg-[#111111] border border-white/10 rounded-xl p-7 block group">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <div class="flex gap-2 flex-wrap mb-3">
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">OpenClaw</span>
-                  <span class="inline-block bg-[#e63939]/10 border border-[#e63939]/20 text-[#e63939] text-[0.65rem] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full">Persistent Agents</span>
-                </div>
-                <h2 class="text-white font-semibold text-xl tracking-tight">Personal AI Agents</h2>
-              </div>
-              <svg class="text-gray-600 group-hover:text-[#e63939] transition-colors duration-200 flex-shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6">Custom OpenClaw setups for health, fitness, finance, and admin. Self-hosted, persistent agents that run on any messaging platform or voice interface.</p>
-            <div class="flex gap-2 flex-wrap">
-              <span class="text-gray-600 text-xs">OpenClaw</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Claude / GPT</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Telegram / Signal</span>
-              <span class="text-gray-700 text-xs">·</span>
-              <span class="text-gray-600 text-xs">Voice</span>
-            </div>
-          </a>
-
-        </div>
+      <div class="blotter">
+        <a class="blotter-row" href="/portfolio/ai-modernisation">
+          <span class="n">05</span>
+          <span class="st">Offer</span>
+          <h2>AI Modernisation</h2>
+          <p>We audit traditional operations, find where time is lost, and build AI integrations that remove the bottlenecks.</p>
+        </a>
+        <a class="blotter-row" href="/portfolio/openclaw">
+          <span class="n">06</span>
+          <span class="st">Offer</span>
+          <h2>Personal AI Agents</h2>
+          <p>Custom OpenClaw setups for health, fitness, finance, and admin. Self-hosted, persistent agents.</p>
+        </a>
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
-
-  <!-- ─── FOOTER ─────────────────────────────────────────────── -->
-  <footer class="border-t border-white/5 py-8 px-6">
-    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2.5">
-        <svg width="20" height="20" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><clipPath id="ccf"><circle cx="18" cy="18" r="16"/></clipPath></defs>
-          <g clip-path="url(#ccf)">
-            <circle cx="3" cy="3" r="1.1" fill="#e63939"/><circle cx="6.75" cy="3" r="1.1" fill="#e63939"/><circle cx="10.5" cy="3" r="1.1" fill="#e63939"/><circle cx="14.25" cy="3" r="1.1" fill="#e63939"/><circle cx="18" cy="3" r="1.1" fill="#e63939"/><circle cx="21.75" cy="3" r="1.1" fill="#e63939"/><circle cx="25.5" cy="3" r="1.1" fill="#e63939"/><circle cx="29.25" cy="3" r="1.1" fill="#e63939"/><circle cx="33" cy="3" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="6.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="18" cy="6.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="6.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="6.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="6.75" r="1.1" fill="#e63939"/><circle cx="33" cy="6.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="10.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="18" cy="10.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="10.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="10.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="10.5" r="1.1" fill="#e63939"/><circle cx="33" cy="10.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="14.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="18" cy="14.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="14.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="14.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="14.25" r="1.1" fill="#e63939"/><circle cx="33" cy="14.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="18" r="1.1" fill="#e63939"/><circle cx="6.75" cy="18" r="1.1" fill="#e63939"/><circle cx="10.5" cy="18" r="1.1" fill="#e63939"/><circle cx="14.25" cy="18" r="1.1" fill="#e63939"/><circle cx="18" cy="18" r="1.1" fill="#e63939"/><circle cx="21.75" cy="18" r="1.1" fill="#e63939"/><circle cx="25.5" cy="18" r="1.1" fill="#e63939"/><circle cx="29.25" cy="18" r="1.1" fill="#e63939"/><circle cx="33" cy="18" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="21.75" r="1.1" fill="#e63939"/><circle cx="6.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="10.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="14.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="18" cy="21.75" r="1.1" fill="#e63939"/><circle cx="21.75" cy="21.75" r="1.1" fill="#e63939"/><circle cx="25.5" cy="21.75" r="1.1" fill="#e63939"/><circle cx="29.25" cy="21.75" r="1.1" fill="#e63939"/><circle cx="33" cy="21.75" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="25.5" r="1.1" fill="#e63939"/><circle cx="6.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="10.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="14.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="18" cy="25.5" r="1.1" fill="#e63939"/><circle cx="21.75" cy="25.5" r="1.1" fill="#e63939"/><circle cx="25.5" cy="25.5" r="1.1" fill="#e63939"/><circle cx="29.25" cy="25.5" r="1.1" fill="#e63939"/><circle cx="33" cy="25.5" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="29.25" r="1.1" fill="#e63939"/><circle cx="6.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="10.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="14.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="18" cy="29.25" r="1.1" fill="#e63939"/><circle cx="21.75" cy="29.25" r="1.1" fill="#e63939"/><circle cx="25.5" cy="29.25" r="1.1" fill="#e63939"/><circle cx="29.25" cy="29.25" r="1.1" fill="#e63939"/><circle cx="33" cy="29.25" r="1.1" fill="#e63939"/>
-            <circle cx="3" cy="33" r="1.1" fill="#e63939"/><circle cx="6.75" cy="33" r="1.1" fill="#e63939"/><circle cx="10.5" cy="33" r="1.1" fill="#e63939"/><circle cx="14.25" cy="33" r="1.1" fill="#e63939"/><circle cx="18" cy="33" r="1.1" fill="#e63939"/><circle cx="21.75" cy="33" r="1.1" fill="#e63939"/><circle cx="25.5" cy="33" r="1.1" fill="#e63939"/><circle cx="29.25" cy="33" r="1.1" fill="#e63939"/><circle cx="33" cy="33" r="1.1" fill="#e63939"/>
-          </g>
-        </svg>
-        <span class="text-gray-500 text-sm font-medium">Ventus Labs</span>
-      </div>
-      <p class="text-gray-600 text-sm">&copy; 2026 Ventus Labs. All rights reserved.</p>
-      <a href="mailto:contact@ventuslabs.co" class="text-gray-600 text-sm hover:text-[#e63939] transition-colors duration-200">
-        contact@ventuslabs.co
-      </a>
-    </div>
+  <footer class="colophon">
+    <span>Ventus Labs</span>
+    <span>© 2026</span>
+    <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a>
   </footer>
-
 </body>
 </html>
