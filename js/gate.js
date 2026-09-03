@@ -69,8 +69,6 @@ async function boot() {
     uSize: { value: 1 },
     uTime: { value: 0 },
     uExplode: { value: 0 },
-    uHover: { value: 0 },
-    uMouse: { value: new THREE.Vector3(0, 0, radius) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -81,8 +79,6 @@ async function boot() {
       uniform float uSize;
       uniform float uTime;
       uniform float uExplode;
-      uniform float uHover;
-      uniform vec3 uMouse;
       attribute vec3 aVel;
       attribute float aSeed;
       varying float vAlpha;
@@ -91,11 +87,6 @@ async function boot() {
         vec3 p = position;
         float breathe = 1.0 + sin(uTime * 0.7 + aSeed * 6.283) * 0.012;
         p *= breathe;
-
-        float d = length(p - uMouse);
-        float pull = uHover * 0.28 * exp(-d * d * 3.4);
-        p += normalize(p + 0.0001) * pull;
-
         p += aVel * uExplode;
         p.y += uExplode * aSeed * 0.8;
 
@@ -123,20 +114,17 @@ async function boot() {
   const points = new THREE.Points(geometry, material);
   scene.add(points);
 
-  const hitSphere = new THREE.Mesh(
-    new THREE.SphereGeometry(radius * 1.08, 16, 16),
-    new THREE.MeshBasicMaterial({ visible: false })
-  );
-  scene.add(hitSphere);
-
   const pointer = new THREE.Vector2(0, 0);
-  const targetRot = new THREE.Vector2(0, 0);
-  const look = new THREE.Vector2(0, 0);
-  const raycaster = new THREE.Raycaster();
+  const lastPointer = new THREE.Vector2(0, 0);
+  const worldX = new THREE.Vector3(1, 0, 0);
+  const worldY = new THREE.Vector3(0, 1, 0);
+  const worldZ = new THREE.Vector3(0, 0, 1);
+  let hasPointer = false;
   let exploding = false;
   let explodeStart = 0;
-  let hover = 0;
-  let spin = 0;
+  let velX = 0;
+  let velY = 0;
+  let velZ = 0;
   const clock = new THREE.Clock();
 
   function resize() {
@@ -153,8 +141,22 @@ async function boot() {
     const y = e.touches ? e.touches[0].clientY : e.clientY;
     pointer.x = (x / window.innerWidth) * 2 - 1;
     pointer.y = -(y / window.innerHeight) * 2 + 1;
-    targetRot.y = pointer.x * 0.55;
-    targetRot.x = pointer.y * 0.32;
+    if (hasPointer) {
+      const dx = pointer.x - lastPointer.x;
+      const dy = pointer.y - lastPointer.y;
+      velX += dy * 0.32;
+      velY += dx * 0.32;
+      velZ += (lastPointer.x * dy - lastPointer.y * dx) * 0.22;
+      velX = Math.max(-0.05, Math.min(0.05, velX));
+      velY = Math.max(-0.05, Math.min(0.05, velY));
+      velZ = Math.max(-0.04, Math.min(0.04, velZ));
+    }
+    lastPointer.copy(pointer);
+    hasPointer = true;
+  }
+
+  function onPointerLeave() {
+    hasPointer = false;
   }
 
   function explode() {
@@ -167,18 +169,19 @@ async function boot() {
     const t = clock.getElapsedTime();
     uniforms.uTime.value = t;
 
-    if (!exploding) {
-      spin += 0.0024;
-      look.x += (targetRot.x - look.x) * 0.07;
-      look.y += (targetRot.y - look.y) * 0.07;
-      points.rotation.set(look.x, spin + look.y, 0);
-      hitSphere.rotation.copy(points.rotation);
-      hitSphere.updateMatrixWorld();
-    } else {
+    velX *= 0.86;
+    velY *= 0.86;
+    velZ *= 0.86;
+    if (!exploding) points.rotateOnWorldAxis(worldY, 0.0014);
+    points.rotateOnWorldAxis(worldX, velX);
+    points.rotateOnWorldAxis(worldY, velY);
+    points.rotateOnWorldAxis(worldZ, velZ);
+
+    if (exploding) {
       const k = Math.min(1, (t - explodeStart) / 1.35);
       const eased = 1 - Math.pow(1 - k, 3);
       uniforms.uExplode.value = eased;
-      points.rotation.y += 0.012 * (1 - k);
+      points.rotateOnWorldAxis(worldY, 0.01 * (1 - k));
       if (k > 0.16) {
         gate.classList.add("is-revealing");
         document.body.classList.remove("is-gated");
@@ -190,16 +193,6 @@ async function boot() {
       }
     }
 
-    raycaster.setFromCamera(pointer, camera);
-    const hits = raycaster.intersectObject(hitSphere);
-    const over = hits.length > 0;
-    hover += ((over ? 1 : 0.18) - hover) * 0.1;
-    uniforms.uHover.value = hover * (1 - uniforms.uExplode.value);
-    if (hits[0]) uniforms.uMouse.value.copy(hits[0].point);
-    else {
-      uniforms.uMouse.value.set(pointer.x * radius, pointer.y * radius, radius * 0.4);
-    }
-
     renderer.render(scene, camera);
     requestAnimationFrame(frame);
   }
@@ -208,6 +201,8 @@ async function boot() {
   window.addEventListener("resize", resize);
   window.addEventListener("pointermove", onPointer, { passive: true });
   window.addEventListener("touchmove", onPointer, { passive: true });
+  gate.addEventListener("pointerleave", onPointerLeave);
+  document.addEventListener("mouseleave", onPointerLeave);
   gate.addEventListener("click", explode);
   document.querySelector(".skip")?.addEventListener("click", () => openSite());
   gate.addEventListener("keydown", (e) => {
