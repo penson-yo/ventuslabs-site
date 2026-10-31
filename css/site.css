@@ -609,7 +609,7 @@ button { font-family: inherit; }
   position: absolute;
   inset: 10%;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--red) 0 2px, transparent 2.5px) 0 0 / 12px 12px;
+  background: radial-gradient(circle, var(--red) 0 1.5px, transparent 2px) 0 0 / 12px 12px;
   -webkit-mask: radial-gradient(closest-side, #000 70%, transparent);
   mask: radial-gradient(closest-side, #000 70%, transparent);
   opacity: 0.55;
