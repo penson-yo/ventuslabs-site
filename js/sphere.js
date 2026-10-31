@@ -56,7 +56,7 @@ function start() {
     canvas.height = Math.round(size * dpr);
     canvas.style.width = size + "px";
     canvas.style.height = size + "px";
-    paintDot(size * 0.022 * dpr);
+    paintDot(size * 0.0165 * dpr);
     if (!running) draw();
   }
 
