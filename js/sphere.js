@@ -106,10 +106,21 @@ function start() {
     requestAnimationFrame(frame);
   }
 
+  function clearPointer() {
+    velX = velY = velZ = 0;
+    last = null;
+  }
+
   function onPointer(e) {
-    const box = holder.getBoundingClientRect();
+    const box = canvas.getBoundingClientRect();
     const px = ((e.clientX - box.left) / box.width) * 2 - 1;
     const py = -((e.clientY - box.top) / box.height) * 2 + 1;
+    // Perspective expands the projected unit sphere beyond its 0.4 radius.
+    const radius = 0.8 / Math.sqrt(1 - 1 / (4.2 * 4.2));
+    if (!visible || px * px + py * py > radius * radius) {
+      clearPointer();
+      return;
+    }
     if (last) {
       const dx = px - last[0];
       const dy = py - last[1];
@@ -126,12 +137,13 @@ function start() {
 
   if (still) return;
 
-  const hero = holder.closest("section") || holder;
-  hero.addEventListener("pointermove", onPointer, { passive: true });
-  hero.addEventListener("pointerleave", () => (last = null));
+  canvas.addEventListener("pointermove", onPointer, { passive: true });
+  canvas.addEventListener("pointerleave", clearPointer);
+  canvas.addEventListener("pointercancel", clearPointer);
   new IntersectionObserver(([entry]) => {
     visible = entry.isIntersecting;
     if (visible) run();
+    else clearPointer();
   }).observe(holder);
   run();
 }
