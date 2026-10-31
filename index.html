@@ -12,32 +12,8 @@
   <link rel="stylesheet" href="css/site.css" />
   <script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_o92tVOgYzOb98J");whop.track("page");</script>
 </head>
-<body class="is-gated">
+<body class="home">
   <a class="skip" href="#main">Skip to content</a>
-
-  <div id="gate" class="gate" role="button" tabindex="0" aria-label="Enter Ventus Labs">
-    <canvas id="gate-canvas"></canvas>
-    <p class="gate-hint">Click the mark</p>
-  </div>
-
-  <div class="tape" aria-hidden="true">
-    <div class="tape-track">
-      <span>Web &amp; Mobile</span><span class="dot">/</span>
-      <span>Automation</span><span class="dot">/</span>
-      <span>Internal Tools</span><span class="dot">/</span>
-      <span>AI Software</span><span class="dot">/</span>
-      <span>Architecture</span><span class="dot">/</span>
-      <span>FinTech</span><span class="dot">/</span>
-      <span>iOS</span><span class="dot">/</span>
-      <span>Web &amp; Mobile</span><span class="dot">/</span>
-      <span>Automation</span><span class="dot">/</span>
-      <span>Internal Tools</span><span class="dot">/</span>
-      <span>AI Software</span><span class="dot">/</span>
-      <span>Architecture</span><span class="dot">/</span>
-      <span>FinTech</span><span class="dot">/</span>
-      <span>iOS</span><span class="dot">/</span>
-    </div>
-  </div>
 
   <header class="site-head">
     <a class="brand" href="/">
@@ -51,18 +27,22 @@
   </header>
 
   <main id="main">
-    <section class="hero">
-      <p class="hero-ghost" aria-hidden="true">VL</p>
-      <p class="hero-index">01 / AI-augmented studio</p>
-      <h1>
-        <span class="hero-line"><span>Custom</span></span>
-        <span class="hero-line"><span>Software</span></span>
-        <span class="hero-line"><span>That Actually</span></span>
-        <span class="hero-line"><span><em>Works.</em></span></span>
-      </h1>
-      <div class="hero-foot">
-        <p>We design, build, and deploy high-performance web &amp; mobile applications, internal dashboards, and custom integrations that drive real business results.</p>
-        <a class="btn" href="mailto:contact@ventuslabs.co">Start a Project</a>
+    <section class="hero hero--home">
+      <div class="hero-copy">
+        <p class="hero-index">01 / AI-augmented studio</p>
+        <h1>
+          <span class="hero-line"><span>Custom</span></span>
+          <span class="hero-line"><span>Software</span></span>
+          <span class="hero-line"><span>That Actually</span></span>
+          <span class="hero-line"><span><em>Works.</em></span></span>
+        </h1>
+        <div class="hero-foot">
+          <p>We design, build, and deploy web and mobile apps, internal dashboards, workflow automations, and trading systems for founders, traders, and investors.</p>
+          <a class="btn" href="mailto:contact@ventuslabs.co">Start a project</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <canvas id="sphere"></canvas>
       </div>
     </section>
 
@@ -107,26 +87,28 @@
 
     <section class="section">
       <div class="section-head">
-        <p class="idx">03 / Why it matters</p>
-        <h2>Built for results</h2>
+        <p class="idx">03 / Build log</p>
+        <h2>Shipped and in build</h2>
       </div>
-      <div class="board">
-        <article>
-          <strong>Prod</strong>
-          <p>Reliable, secure, and production-ready applications built to scale with your company.</p>
-        </article>
-        <article>
-          <strong>Hours</strong>
-          <p>Automate complex backend workflows, operational bottlenecks, and manual operations.</p>
-        </article>
-        <article>
-          <strong>Fast</strong>
-          <p>From brief to deployed. We move quickly and ship clean, highly-optimized systems.</p>
-        </article>
-        <article>
-          <strong>Bespoke</strong>
-          <p>No templates. Every script, integration, and user interface is custom-tailored to your business.</p>
-        </article>
+      <div class="blotter">
+        <a class="blotter-row" href="/portfolio/heypressto">
+          <span class="n">01</span>
+          <span class="st">Live</span>
+          <h3>Pressto AI</h3>
+          <p>Full website design and build for an AI-powered PR platform trained by real PR professionals.</p>
+        </a>
+        <a class="blotter-row" href="/portfolio/launchlink">
+          <span class="n">02</span>
+          <span class="st">Live</span>
+          <h3>LaunchLink</h3>
+          <p>Full website design and build for a specialist PR agency serving the world’s fastest-moving tech brands.</p>
+        </a>
+        <a class="blotter-row" href="/portfolio/clara">
+          <span class="n">03</span>
+          <span class="st">Beta</span>
+          <h3>Clara</h3>
+          <p>Voice-first capture for ADHD. Speak a thought and Clara transcribes it and routes it into your knowledge system.</p>
+        </a>
       </div>
     </section>
 
@@ -138,8 +120,8 @@
       <a class="blotter-row" href="/portfolio">
         <span class="n">→</span>
         <span class="st">Open</span>
-        <h2>The work</h2>
-        <p>Apps, agents, and tools shipped by Ventus Labs. Web, iOS, and custom systems.</p>
+        <h3>The full book</h3>
+        <p>Apps, agents, and tools by Ventus Labs: two live sites, two builds in progress, and two services.</p>
       </a>
     </section>
 
@@ -148,7 +130,7 @@
       <h2>Let’s build your next system.</h2>
       <p>Tell us the bottleneck you want to solve. We’ll design, architect, and build the custom software to handle it.</p>
       <a class="btn" href="mailto:contact@ventuslabs.co">Get in touch</a>
-      <p class="note">Or write directly — <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a></p>
+      <p class="note">Or email <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a></p>
     </section>
   </main>
 
@@ -157,9 +139,6 @@
     <span>© 2026</span>
     <a href="mailto:contact@ventuslabs.co">contact@ventuslabs.co</a>
   </footer>
-  <noscript>
-    <style>.gate { display: none; } body.is-gated { overflow: auto; }</style>
-  </noscript>
-  <script type="module" src="js/gate.js"></script>
+  <script type="module" src="js/sphere.js"></script>
 </body>
 </html>
