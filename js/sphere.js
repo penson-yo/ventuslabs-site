@@ -107,8 +107,12 @@ function start() {
   }
 
   function clearPointer() {
-    velX = velY = velZ = 0;
     last = null;
+  }
+
+  function resetPointer() {
+    velX = velY = velZ = 0;
+    clearPointer();
   }
 
   function onPointer(e) {
@@ -139,11 +143,11 @@ function start() {
 
   canvas.addEventListener("pointermove", onPointer, { passive: true });
   canvas.addEventListener("pointerleave", clearPointer);
-  canvas.addEventListener("pointercancel", clearPointer);
+  canvas.addEventListener("pointercancel", resetPointer);
   new IntersectionObserver(([entry]) => {
     visible = entry.isIntersecting;
     if (visible) run();
-    else clearPointer();
+    else resetPointer();
   }).observe(holder);
   run();
 }
